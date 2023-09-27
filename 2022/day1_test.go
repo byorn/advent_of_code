@@ -7,7 +7,7 @@ import (
 	"testing"
 )
 
-func TestNewDeck(t *testing.T) {
+func TestDay1(t *testing.T) {
 	dir, err := os.Getwd()
 	if err != nil {
 		fmt.Errorf("Dir %v does not exists", err)
