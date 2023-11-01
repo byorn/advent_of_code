@@ -12,7 +12,7 @@ func main() {
 	if err != nil {
 		err = fmt.Errorf("Dir %v does not exists", err)
 	}
-	result := _2022.Day4(dir + "/2022/input/day4.txt")
+	result, result2 := _2022.Day4(dir + "/2022/input/day4.txt")
 
-	fmt.Println(result, err)
+	fmt.Println(result, result2, err)
 }
