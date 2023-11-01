@@ -27,8 +27,9 @@ In case the Elves get hungry and need extra snacks, they need to know which Elf 
 package _2022
 
 import (
-	util "github.com/byorn/advent_of_code/util"
 	"strconv"
+
+	util "github.com/byorn/advent_of_code/util"
 )
 
 func Day1(inputFile string) int {
@@ -40,7 +41,6 @@ func Day1(inputFile string) int {
 Return the max total from all group totals
 */
 func getGroupMax(inputLines []string) int {
-
 	var maximumCalories int
 	var currentTotalReindeerCalories int
 	currentReindeer := 1

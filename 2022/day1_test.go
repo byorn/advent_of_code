@@ -2,9 +2,10 @@ package _2022
 
 import (
 	"fmt"
-	"github.com/stretchr/testify/assert"
 	"os"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestDay1(t *testing.T) {

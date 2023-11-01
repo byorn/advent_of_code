@@ -25,8 +25,10 @@ lose - 0
 package _2022
 
 import (
-	util "github.com/byorn/advent_of_code/util"
+	"fmt"
 	"strings"
+
+	util "github.com/byorn/advent_of_code/util"
 )
 
 var gameResult = map[string]string{
@@ -65,7 +67,8 @@ var symbolPoints = map[string]int{
 
 func Day2_Part1(inputFile string) int {
 	inputText := util.ReadFile(inputFile)
-	return getTotalScore(inputText)
+fmt.Println("okay testing neovim go")
+  return getTotalScore(inputText)
 }
 
 func Day2_Part2(inputFile string) int {
