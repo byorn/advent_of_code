@@ -1,1 +1,7 @@
-# Advent of Code - Code challenges in Golang
+# Advent of Code - Code Golang
+#
+#
+
+In the specific package folder you can run tests and see outputs with
+--
+go test -v
