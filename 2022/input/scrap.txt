@@ -1,1 +1,20 @@
-abcbeg
+$ cd /
+$ ls
+1 fileone.png
+1 filetwo.png
+dir jssbn
+dir pictures
+$ cd jssbn
+1 lfrctthp.tlv
+dir ltwmz
+dir nmzntmcf
+1 wbs.vmh
+1 zsntdzf
+$ cd ltwmz
+1 abc.doc
+1 def.doc
+$ cd ..
+$ cd ..
+$ cd pictures
+1 pic1.png
+1 pic2.png
