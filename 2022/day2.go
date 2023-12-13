@@ -54,11 +54,13 @@ var gameResultPart2 = map[string][]string{
 	"CY": {"D", "Z"},
 	"CZ": {"W", "X"},
 }
+
 var gameResultPoints = map[string]int{
 	"W": 6,
 	"D": 3,
 	"L": 0,
 }
+
 var symbolPoints = map[string]int{
 	"X": 1,
 	"Y": 2,
@@ -67,8 +69,8 @@ var symbolPoints = map[string]int{
 
 func Day2_Part1(inputFile string) int {
 	inputText := util.ReadFile(inputFile)
-fmt.Println("okay testing neovim go")
-  return getTotalScore(inputText)
+	fmt.Println("okay testing neovim go")
+	return getTotalScore(inputText)
 }
 
 func Day2_Part2(inputFile string) int {
@@ -77,9 +79,8 @@ func Day2_Part2(inputFile string) int {
 }
 
 func getTotalScore(scores []string) int {
-
-	var symbolTotalScore = 0
-	var gameResultTotalScore = 0
+	symbolTotalScore := 0
+	gameResultTotalScore := 0
 	for _, score := range scores {
 
 		play := strings.Replace(score, " ", "", -1)
@@ -93,9 +94,8 @@ func getTotalScore(scores []string) int {
 }
 
 func getTotalScorePart2(scores []string) int {
-
-	var symbolTotalScore = 0
-	var gameResultTotalScore = 0
+	symbolTotalScore := 0
+	gameResultTotalScore := 0
 	for _, score := range scores {
 
 		play := strings.Replace(score, " ", "", -1)
@@ -110,10 +110,8 @@ func getTotalScorePart2(scores []string) int {
 }
 
 func getGameResultAndSymbol(play string) (int, int) {
-
-	var result = gameResult[play]
-	var gameResultPoint = gameResultPoints[result]
-	var symbolPoint = symbolPoints[play[1:]]
+	result := gameResult[play]
+	gameResultPoint := gameResultPoints[result]
+	symbolPoint := symbolPoints[play[1:]]
 	return gameResultPoint, symbolPoint
-
 }
