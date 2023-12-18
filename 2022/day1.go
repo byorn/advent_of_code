@@ -34,6 +34,7 @@ import (
 
 func Day1(inputFile string) int {
 	inputText := util.ReadFile(inputFile)
+	
 	return getGroupMax(inputText)
 }
 
