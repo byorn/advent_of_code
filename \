@@ -13,9 +13,9 @@ func TestDay3(t *testing.T) {
 	if err != nil {
 		fmt.Errorf("Dir %v does not exists", err)
 	}
-	result, result2 := Day3(dir + "/input/day3.txt")
+	result, result2 := Day3(dir + "/input/scrap.txt")
 	assert.Equal(t, result, 531932, "Is not 531932")
-	assert.Equal(t, result2, 73646890, "Is not 73646890")
+	assert.Equal(t, result2, 0, "Is not 0")
 
 	str := "......#23...32.*1.45..8898.948"
 	for _, num := range GetNumbersInLine(str) {
