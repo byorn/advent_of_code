@@ -4,6 +4,24 @@ import (
 	"sort"
 )
 
+func InsertIntToIndex(arr []int, index int, number int) []int {
+	slice1 := arr[:index]
+	slice2 := arr[index:]
+	return append(slice1, append([]int{number}, slice2...)...)
+}
+
+func InsertStringToIndex(arr []string, index int, value string) []string {
+	slice1 := arr[:index]
+	slice2 := arr[index:]
+	return append(slice1, append([]string{value}, slice2...)...)
+}
+
+func InsertStringArrayToIndex(arr [][]string, index int, valueToInsert []string) [][]string {
+	slice1 := arr[:index]
+	slice2 := arr[index:]
+	return append(slice1, append([][]string{valueToInsert}, slice2...)...)
+}
+
 func Contains(items []Item, target string) bool {
 	for _, item := range items {
 		if str, ok := item.(string); ok && target == str {
