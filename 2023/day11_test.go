@@ -13,12 +13,8 @@ func TestDay11(t *testing.T) {
 	if err != nil {
 		fmt.Errorf("Dir %v does not exists", err)
 	}
-	result, result2 := Day11(dir + "/input/scrap.txt")
+	result, result2 := Day11(dir + "/input/day11.txt")
 
-	arr := []int{0, 1, 2, 3, 4, 5}
-
-	fmt.Println(arr)
-
-	assert.Equal(t, result, 55834, "Is not 551834")
-	assert.Equal(t, result2, 53221, "Is not 53221")
+	assert.Equal(t, result, 9274989, "Is not 9274989")
+	assert.Equal(t, result2, 357134560737, "Is not 357134560737")
 }

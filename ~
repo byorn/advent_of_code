@@ -27,7 +27,7 @@ func day11Part1(input []string) int {
 	universe = expandUniverse(universe, 1)
 	universe, _, totalNumOfGalaxies := numberTheGalaxies(universe)
 	galaxyCombinations := util.GetCombinations(totalNumOfGalaxies, 2)
-	//	printUniverse(universe)
+	printUniverse(universe)
 	return calculateSteps(universe, galaxyCombinations)
 }
 
@@ -91,11 +91,14 @@ func calculateStepsPart2(universe [][]string, comb [][]int, rows_having_no_galax
 			return v < toPoint.Col
 		})
 
-		fromPoint.Row = fromPoint.Row + len(rowsToExpand_from)*1000000 - len(rowsToExpand_from)
-		fromPoint.Col = fromPoint.Col + len(colsToExpand_from)*1000000 - len(colsToExpand_from)
-		toPoint.Row = toPoint.Row + len(rowsToExpand_to)*1000000 - len(rowsToExpand_to)
-		toPoint.Col = toPoint.Col + len(colsToExpand_to)*1000000 - len(colsToExpand_to)
+		fmt.Printf("\n from %s", from)
+		fmt.Printf("\n rows to expand %v cols to expand %v", rows_having_no_galaxy, cols_having_no_galaxy)
+		fromPoint.Row += (len(rowsToExpand_from)*10 + 2)
+		fromPoint.Col += (len(colsToExpand_from)*10 + 2)
+		toPoint.Row += (len(rowsToExpand_to)*10 + 2)
+		toPoint.Col += (len(colsToExpand_to)*10 + 2)
 
+		fmt.Printf("\n from Row: %d Col %d", fromPoint.Row, fromPoint.Col)
 		steps := int(math.Abs(float64(fromPoint.Row-toPoint.Row)) + math.Abs(float64(fromPoint.Col-toPoint.Col)))
 		//    steps := util.CalculateDistance(universe, from, to)
 		total += steps
@@ -223,7 +226,7 @@ func day11Part2(input []string) int {
 	universe, _, totalNumOfGalaxies := numberTheGalaxies(universe)
 	galaxyCombinations := util.GetCombinations(totalNumOfGalaxies, 2)
 
-	//	printUniverse(universe)
+	printUniverse(universe)
 	return calculateStepsPart2(universe, galaxyCombinations, rowsToExapand, colsToExpand)
 	// fmt.Println(input)
 }

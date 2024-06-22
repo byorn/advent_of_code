@@ -4,6 +4,18 @@ import (
 	"sort"
 )
 
+type Predicate func(int) bool
+
+func Filter(arr []int, pre Predicate) []int {
+	var result []int
+	for _, v := range arr {
+		if pre(v) {
+			result = append(result, v)
+		}
+	}
+	return result
+}
+
 func InsertIntToIndex(arr []int, index int, number int) []int {
 	slice1 := arr[:index]
 	slice2 := arr[index:]
